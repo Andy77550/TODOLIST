@@ -1,0 +1,91 @@
+*, ::before, ::after{
+  padding: 0;
+  margin: 0;
+}
+
+body{
+  width: 50%;
+  margin: 50px auto;
+}
+
+header{
+  text-align: center;
+}
+
+header h1 {
+  font-size: 40px;
+}
+
+.input-group-text{
+  background-color: #74b9ff;
+  color: #fff;
+}
+
+.task {
+  background-color: #74b9ff;
+  padding: 15px;
+  margin: 5px;
+  overflow-x: hidden;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.task span {
+  color: #FFF;
+}
+
+.icon {
+  float: right;
+  margin-right: 20px;
+}
+
+article {
+  display: grid;
+}
+
+.edit-todo {
+  width: 85%;
+  font-size: 16px;
+  color: #FFFFFF;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #FFFFFF;
+}
+
+.button {
+  padding: 10px;
+  font-size: 14px;
+  color: #636e72;
+  background-color: #fff;
+  border: none;
+  cursor: pointer;
+  width: 100px;
+  border-radius: 5px;
+  margin-top: 15px;
+}
+
+.container-btn{
+  display: inline-flex;
+  justify-content: center;
+
+}
+
+.button.selected {
+  color: #FFF;
+  background-color: #34495e;
+}
+
+.button.clear {
+  float: right;
+  color: #FFF;
+  background-color: #ee1630;
+  width: 170px;
+}
+
+.bi.bi-trash-fill{
+  color: #ee1630;
+}
+
+.bi.bi-pen-fill{
+  color: #fdcb6e;
+}
