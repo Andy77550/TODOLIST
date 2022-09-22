@@ -1,0 +1,14 @@
+version: '3.6'
+services:
+  node:
+    container_name: project_node
+    image: 'node:alpine'
+    working_dir: /home/app
+    command:
+      - /bin/sh
+      - '-c'
+      - 'npm install && npm i -g serve && npm run build && serve -s build'
+    ports:
+      - '3000:3000'
+    volumes:
+      - './react_pwa:/home/app'
