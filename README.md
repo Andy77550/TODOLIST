@@ -8,7 +8,7 @@
 create-react-app react_pwa --template cra-template-pwa
 ```
 
-##Start project
+## Start project
 
 ```
 npm install 
