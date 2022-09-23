@@ -8,6 +8,13 @@
 create-react-app react_pwa --template cra-template-pwa
 ```
 
+##Start project
+
+```
+npm install 
+```
+in user and server case
+
 ## Launch docker
 ```
 docker-compose up
