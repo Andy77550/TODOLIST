@@ -15,6 +15,7 @@ function App() {
       <TodoForm />
       <br />
       <TodoList />
+      <br />
       <Todos />
     </div>
   );
