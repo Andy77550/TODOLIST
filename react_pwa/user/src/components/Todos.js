@@ -22,10 +22,10 @@ export const Todos = () => {
   const getTodos = () => {
     if (currentTab === ALL_TODOS) {
       return todos;
-    } else if (currentTab === ACTIVE_TODOS) {
-      return todos.filter((todo) => !todo.done);
     } else if (currentTab === DONE_TODOS) {
       return todos.filter((todo) => todo.done);
+    } else if (currentTab === ACTIVE_TODOS) {
+      return todos.filter((todo) => !todo.done);
     }
   };
 
@@ -38,25 +38,30 @@ export const Todos = () => {
   };
 
   return (
-    <article>
-      <div>
-        <Tabs currentTab={currentTab} />
+    <div className="card">
+      <div className="card-body">
+        <article>
+          <div className="container-btn">
+            <Tabs currentTab={currentTab} />
+          </div>
+          <br />
+          <div>
+            <ul>
+              {getTodos().map((todo) => (
+                <Todo key={todo._id} todo={todo} />
+              ))}
+            </ul>
+          </div>
 
-        {todos.some((todo) => todo.done) ? (
-          <button onClick={removeDoneTodos} className="button clear">
-            Delete Done Todos
-          </button>
-        ) : null}
-      </div>
+          <div>
+            <button onClick={removeDoneTodos} className="button clear">
+              Delete done task
+            </button>
 
-      <div>
-        <ul>
-          {getTodos().map((todo) => (
-            <Todo key={todo._id} todo={todo} />
-          ))}
-        </ul>
+          </div>
+        </article>
       </div>
-    </article>
+    </div>
   );
 };
 
